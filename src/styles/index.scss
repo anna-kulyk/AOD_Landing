@@ -3,7 +3,9 @@
 $fontfamily: 'Lato', sans-serif;
 $minwidth: 320px;
 
+@import 'mixins';
 @import 'normalizer';
-@import 'style.scss';
+@import 'ui';
+@import 'style';
 @import 'header';
 @import 'footer'
