@@ -6,6 +6,7 @@
 .container {
     max-width: 1130px;
     padding: 0px 15px;
+    margin: 0 auto;
 }
 
 .page {
@@ -30,6 +31,39 @@
     }
 }
 
-.content {
-    font-size: 20px;
+.block {
+    text-align: center;
+
+    // &__icon {}
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #353738;
+        text-transform: uppercase;
+        letter-spacing: 3.6px;
+        margin: 30px 0px 20px;
+        line-height: 24px;
+    }
+
+    &__text {
+        font-size: 18px;
+        font-weight: 400;
+        color: #848789;
+        line-height: 34px;
+    }
+}
+
+.about {
+    background-color: #f7f7f7;
+    padding: 117px 0px;
+
+    // &__block {}
+
+    @media (max-width:900px) {
+        padding: 70px 0px;
+    }
+    @media (max-width:600px) {
+        padding: 45px 0px;
+    }
 }
