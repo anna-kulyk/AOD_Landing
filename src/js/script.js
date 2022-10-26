@@ -7,13 +7,13 @@ document.querySelector(".icon-menu").addEventListener('click', () => {
 })
 
 function ibg(){
-    let ibgs = document.getElementsByClassName('ibg');
-    if(ibgs){
-        for (let item of ibgs) {
-            let imgSrc = item.children[0].attributes[0].value;
-            item.style = `background-image: url("${imgSrc}");`;
+    let elements = document.querySelectorAll('.ibg');
+    elements?.forEach(function(item){
+        let image = item.querySelector('img');
+        if( image.src.length > 0 ){
+            item.style.backgroundImage = `url("${image.src}")`;
         }
-    }
+    });
 }
 
 ibg();
