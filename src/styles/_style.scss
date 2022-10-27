@@ -168,6 +168,7 @@
     &__logo {
         position: absolute;
         @include flexbox();
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         top: 0;
@@ -176,6 +177,10 @@
         height: 100%;
         z-index: 2;
         transition: all 0.3s ease 0s;
+
+        &_hidden {
+            opacity: 0;
+        }
     }
 
     &__image {
@@ -186,9 +191,21 @@
         left: 0;
     }
 
+    &__text {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 10px 0 0 0;
+    }
+
     &:hover {
         .item__logo {
             background-color: rgba(100,194,158,0.5);
+            &_hidden {
+                opacity: 1;
+            }
         } 
     }
 
@@ -233,5 +250,174 @@
 
     @media (max-width:900px) {
         padding: 50px 0 30px 0;
+    }
+
+    @media (max-width:767px) {
+        &__icon {
+            margin: 0 0 15px 0;
+        }
+
+        &__title {
+            font-size: 16px;
+            margin: 0 0 10px 0;
+        }
+    
+        &__text {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+//=============================================================================
+.shop {
+
+    &__row {
+        @include flexbox();
+    }
+
+    &__column {
+        flex: 0 1 33.333%;
+        @include flexbox();
+        flex-wrap: wrap;
+        height: 33.333vw;
+    }
+
+    &__item {
+        width: 50%;
+        height: 50%;
+
+        &_wide {
+            width: 100%;
+        }
+
+        &_long {
+            height: 100%;
+        }
+    }
+
+    &__footer {
+        background-color: #282f35;
+        text-align: center;
+        padding: 75px 0;
+    }
+
+    &__btn {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 2.8px;
+        color: #ffffff;
+        border: 1px solid #94979a;
+        padding: 15px 55px;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            background-color: rgba(100,194,158,0.5);
+        }
+    }
+
+    @media (max-width:767px) {
+        &__row {
+            flex-wrap: wrap;
+        }
+
+        &__column {
+            flex: 0 1 100%;
+            height: 100vw;
+        }
+
+        &__item {
+            padding: 0;
+        }
+
+        &__btn {
+            padding: 15px;
+        }
+    }
+}
+//=============================================================================
+.contact {
+
+    &__row {
+        max-width: 535px;
+        text-align: center;
+        padding: 100px 0; 
+        margin: 0 auto;
+    }
+
+    // &__logo {}
+
+    &__text {
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 400;
+        font-style: italic;
+        color: #848789;
+        margin: 30px 0;
+    }
+
+    &__form {
+        @include flexbox();
+    }
+
+    &__input {
+        flex: 1 1 auto;
+
+        input {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 400;
+            font-style: italic;
+            color: #848789;
+            width: 100%;
+            height: 69px;
+            padding: 0 28px;
+            border: 1px solid #d3d7d9;
+
+            &::placeholder {
+                color: #d1d1d1;
+            }
+    
+            &:focus::placeholder {
+                color: transparent;
+            }
+        }
+    }
+
+    &__btn {
+        flex: 0 0 126px;
+        margin: 0 0 0 8px;
+        transition: all 0.3s ease 0s;
+
+        button {
+            width: 100%;
+            height: 69px;
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: 300;
+            color: #ffffff;
+            text-transform: uppercase;
+            background-color: rgba(100,194,158,1);
+            
+            &:hover {
+                background-color: rgba(100,194,158,0.8);
+            }
+        }
+
+    }
+
+    @media (max-width:767px) {
+        &__row {
+            padding: 50px 0;
+        }
+    }
+    @media (max-width:450px) {
+        &__form {
+            display: block;
+        }
+
+        &__btn {
+            margin: 8px 0 0 0;
+        }
     }
 }
