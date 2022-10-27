@@ -1,0 +1,67 @@
+.footer {
+    background-color: #f7f7f7;
+
+    &__row {
+        @include flexbox();
+        justify-content: space-between;
+        align-items: center;
+        padding: 95px 0;
+    }
+
+    &__info, &__links, &__copyright {
+        flex: 0 1 33.333%;
+    }
+
+    &__company {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 700;
+        color: #848789;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        font-style: italic;
+        color: #848789;
+    }
+
+    &__links {
+        text-align: center;
+        a {
+            margin: 0 7.5px;
+        }
+    }
+
+    &__copyright {
+        text-align: right;
+    }
+
+    @media (max-width:1100px) {
+        &__row {
+            padding: 50px 0;
+        }
+    }
+    @media (max-width:767px) {
+        &__links {
+            a {
+                margin: 0 4px;
+            }
+        }
+    }
+    @media (max-width:535px) {
+        &__row {
+            display: block;
+            padding: 30px 0;
+        }
+
+        &__info, &__links, &__copyright {
+            text-align: center;
+        }
+
+        &__links { 
+            margin: 25px 0;
+        }
+    }
+}

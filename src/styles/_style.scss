@@ -86,7 +86,7 @@
 
     // &__block {}
 
-    @media (max-width:900px) {
+    @media (max-width:1100px) {
         padding: 70px 0px;
     }
     @media (max-width:600px) {
@@ -248,10 +248,9 @@
         line-height: 34px;
     }
 
-    @media (max-width:900px) {
+    @media (max-width:1100px) {
         padding: 50px 0 30px 0;
     }
-
     @media (max-width:767px) {
         &__icon {
             margin: 0 0 15px 0;
@@ -403,15 +402,14 @@
                 background-color: rgba(100,194,158,0.8);
             }
         }
-
     }
 
-    @media (max-width:767px) {
+    @media (max-width: 1100px) {
         &__row {
             padding: 50px 0;
         }
     }
-    @media (max-width:450px) {
+    @media (max-width: 535px) {
         &__form {
             display: block;
         }
