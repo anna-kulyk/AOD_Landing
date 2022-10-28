@@ -1,17 +1,37 @@
-// let slider = document.querySelector('.slider__body');
-// if(slider) {
-//     slider.slick({
-//         dots: true,
-//         arrows: false,
-//         accessibility: false,
-//         slidesToShow: 1,
-//         autoplaySpeed: 3000,
-//         adaptiveHeight: true,
-//         nextArrow: '<button type="button" class="slick-next"></button>',
-//         prevArrow: '<button type="button" class="slick-prev"></button>',
-//         responsive: [{
-//             breakpoint: 768,
-//             settings: {}
-//         }]
-//     })
-// }
+let slideIndex = 1;
+let dots = document.querySelectorAll('.slider__dot');
+let slides = document.querySelectorAll(".slider__item");
+
+showSlides(slideIndex);
+
+setInterval(()=>plusSlides(1), 10000);
+
+dots.forEach((dot,index) => {
+    dot.addEventListener('click', () => currentSlide(index+1));
+});
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    if (n > slides.length) {slideIndex = 1};
+    if (n < 1) {slideIndex = slides.length};
+
+    slides.forEach(slide => {
+        slide.style.display = "none";
+    });
+
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].classList.add("active");
+}
