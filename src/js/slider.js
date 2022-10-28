@@ -29,9 +29,9 @@ function showSlides(n) {
     });
 
     dots.forEach(dot => {
-        dot.classList.remove("active");
+        dot.classList.remove("slider__dot_active");
     });
 
     slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].classList.add("active");
+    dots[slideIndex-1].classList.add("slider__dot_active");
 }

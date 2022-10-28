@@ -275,10 +275,10 @@
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;
-    }
-      
-    .active, &__dot:hover {
-        background-color: #a9afb3;
+
+        &_active {
+            background-color: #a9afb3;
+        }
     }
       
     @keyframes fade {
