@@ -4,7 +4,15 @@ let slides = document.querySelectorAll(".slider__item");
 
 showSlides(slideIndex);
 
-setInterval(()=>plusSlides(1), 10000);
+let slide = document.querySelector(".slider__body");
+let observer = new IntersectionObserver(function(entries) {
+	if(entries[0].isIntersecting === true)
+		plusSlides(1);
+}, { threshold: [0] });
+
+setInterval(()=>{observer.observe(slide)}, 10000);
+
+// setInterval(()=>plusSlides(1), 10000);
 
 dots.forEach((dot,index) => {
     dot.addEventListener('click', () => currentSlide(index+1));
@@ -13,6 +21,7 @@ dots.forEach((dot,index) => {
 // Next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
+    observer.unobserve(slide);
 }
 
 // Thumbnail image controls
