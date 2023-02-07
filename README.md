@@ -2,6 +2,8 @@
 
 A landing page for a bicycle shop AOD. Portfolio project.
 
+![Screenshot](https://raw.githubusercontent.com/anna-kulyk/AOD_Landing/master/src/assets/AOD.jpg)
+
 ## Installation
 
 ```bash
@@ -42,5 +44,3 @@ npm run build
 
 - Github: [@anna-kulyk](https://github.com/anna-kulyk)
 - LinkedIn: [@Ganna Kulyk](https://linkedin.com/in/ganna-kulyk-b90273252)
-
-![Screenshot](https://raw.githubusercontent.com/anna-kulyk/AOD_Landing/master/src/assets/AOD.jpg)
