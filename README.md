@@ -1,6 +1,6 @@
 # AOD Landing Page
 
-A landing page for a bicycle shop AOD. Portfolio project.
+A landing page for a bicycle shop AOD.
 
 ![Screenshot](https://raw.githubusercontent.com/anna-kulyk/AOD_Landing/master/src/assets/AOD.jpg)
 
